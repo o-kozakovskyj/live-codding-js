@@ -30,20 +30,19 @@
 //---refactoring---
 
 function getPrimes(num) {
-  for (let number = 2; number <= num; number++) {
-
-    function isPrime(number) {
-      for (let index = 2; index < number; index++) {
-        if (number % index === 0) { return false }
-      }
-      return true
-    };
-
+  for (let number = 2; number <= num; number++) 
     if (isPrime(number)) {
       console.log(number);
     }
   }
-}
+function isPrime(number) {
+  for (let index = 2; index < number; index++) {
+    if (number % index === 0) {
+      return false
+    }
+  }
+  return true
+};
 // ---test data---
 
 getPrimes(13);
