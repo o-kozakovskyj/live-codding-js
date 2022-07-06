@@ -41,10 +41,10 @@ function sum(from, to, resolver) {
   for (let index = from; index <= to; index += 1) {
     sum += index;
   }
-  resolver(sunRes)
+  resolver(resolver())
 }
 // ---test---
 function funcAlert(number) {
   alert(number);
 };
-console.log(sum(13, 8, funcAlert(10)))
+console.log(sum(13, 18, funcAlert(10)));
