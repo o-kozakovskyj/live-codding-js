@@ -19,7 +19,7 @@ const filterArrayElements = (arr, callback) => {
 }
 //---test data---
 const testArray = [1, 0, 6, 0, 99, -2]
-const compare3 = function(num) {
+const compare3 = function (num) {
   return num > 3
 }
 console.log(compare3(10))
@@ -33,3 +33,10 @@ const callback = (el, index, arr) => {
   return false;
 };
 console.log(filterArrayElements(testArr, callback))
+// ---multuply
+/// number1, number2... numberN
+function multuply(...args) {
+  
+ console.log(args.reduce((acc, el) => acc* el));
+}
+multuply(2, 6, 8, 2);
